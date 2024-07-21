@@ -7,7 +7,24 @@ const Command = require('../command.js');
 
 
 describe("Rover class", function() {
+  //test 7
 
-  // 7 tests here!
+
+  //test 8
+
+
+  //test 9
+
+
+  //test 10
+  
+
+  //test 11
+  
+
+  //test 12
+  
+
+  //test 13
 
 });
