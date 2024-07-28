@@ -13,7 +13,13 @@ class Rover {
       */
     }
 
-    /* 
+    receiveMessage(message) {
+      return {
+         name: message.name
+      };
+    }
+
+    /* receiveMessage old attempt LUCASSS
     receiveMessage(message) {             //msg is an obj of msg class?
       let message = "the name of the original Message object"; 
       let results = [
