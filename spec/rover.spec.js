@@ -25,11 +25,18 @@ describe("Rover class", function() {
   });
 
   //test 9
-/*  
+//my drafted attempted test
   test("response returned by receiveMessage includes two results if two commands are sent in the message", function() {
-    expect(rover.results).toBe([("string 1"), ("string 2")]);
+    const rover = new Rover(10);
+    const command1 = new Command("type1", "value1");
+    const command2 = new Command("type2", "value2");
+    const message = new Message("Test Message", [command1, command2]);
+    const response = rover.receiveMessage(message);
+    expect(response.results.length).toBe(2);
+  
+  //  expect(rover.results).toBe([("firstcommand"), ("secondcommand")]);
   });
-*/
+
 
   //test 10
   
