@@ -33,13 +33,17 @@ describe("Rover class", function() {
     const message = new Message("Test Message", [command1, command2]);
     const response = rover.receiveMessage(message);
     expect(response.results.length).toBe(2);
-  
   //  expect(rover.results).toBe([("firstcommand"), ("secondcommand")]);
   });
 
-
   //test 10
-  
+ //test("responds correctly to the status check command", function() {
+  //status check 
+//if mode change (valune in obj in obj in array in obj?)
+//if move
+//else reutrn completed obj.results completed false
+  //});
+
 
   //test 11
   

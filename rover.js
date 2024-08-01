@@ -3,32 +3,19 @@ class Rover {
       this.position = position; //((number?))
       this.mode = "NORMAL";
       this.generatorWatts = 110;
-
-      /*
-      this.name = name;
-      if (!name) {
-        throw Error("name required.");
-      }
-      this.commands = commands;
-      */
     }
 
-    /*
-    receiveMessage(message) {
-      return {
-         name: message.name
-      };
-    }
-      */
-
-    // receiveMessage old attempt LUCASSS
+  
+    
     receiveMessage(message) {             //msg is an obj of msg class?
    //   let message = "the name of the original Message object"; 
    //   let results =[("firstcommand"),("secondcommand")];
          //CREATE OBJECTS HERE -each corrisponding to a meassage command
-      return {
+   
+ 
+         return {
          name: message.name,
-         results: message.commands
+         results: message.commands // i need an array of objs in the results key (1 for each command)
       }; //method returns obj with msg(strng) & results (arr of objs)
    }
 
