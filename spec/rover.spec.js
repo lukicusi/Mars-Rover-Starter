@@ -37,12 +37,52 @@ describe("Rover class", function() {
   });
 
   //test 10
- //test("responds correctly to the status check command", function() {
+ test("responds correctly to the status check command", function() {
+  //Dakotah says the following test aspects look fine, look at implementation ???
+  const position = 87382098;
+  const rover = new Rover(position);
+  const statusCheckCommand = new Command("STATUS_CHECK");
+  const message = new Message("Status Check Message", [statusCheckCommand]);
+  const response = rover.receiveMessage(message);
+  const expectedStatus = {
+    mode: rover.mode,
+      generatorWatts: rover.generatorWatts,
+      position: rover.position
+  };
+
+  expect(response.results.length).toBe(1);
+  expect(response.results[0].completed).toBe(true);
+  expect(response.results[0].roverStatus).toEqual(expectedStatus);
+
+
+
+  /* this is me trying to write this test prior
+  const position = 87382098;
+  const rover = new Rover(position);
+  const message = new Message("Status Check Message" [new Command ("STATUS_CHECK")]);
+  const response = rover.receiveMessage(message);
+ 
+  
+  expect(response.name).toBe("Status Check Message");
+  expect(response.results).toHaveLength(1);
+
+  expect(response.results[0]).toEqual({
+    completed: true,
+    roverStatus: {
+      mode: rover.mode,
+      generatorWatts: rover.generatorWatts,
+      position: rover.position
+    }
+  });
+  */
+  
+  
+
   //status check 
 //if mode change (valune in obj in obj in array in obj?)
 //if move
 //else reutrn completed obj.results completed false
-  //});
+  });
 
 
   //test 11

@@ -11,7 +11,21 @@ class Rover {
    //   let message = "the name of the original Message object"; 
    //   let results =[("firstcommand"),("secondcommand")];
          //CREATE OBJECTS HERE -each corrisponding to a meassage command
-   
+      const results = message.commands.map(command => {
+         //initializes results array ^^^
+         if (command.commandType === "STATUS_CHECK") {
+            return {
+               completed: true,
+               roverStatus: {
+                  mode: this.mode,
+                  generatorWatts: this.generatorWatts,
+                  position: this.position
+               }
+            };
+         }
+         
+         //additional commands and if completed false here ---return{ };
+      });
  
          return {
          name: message.name,
